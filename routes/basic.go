@@ -11,6 +11,7 @@ func BasicsRoutes(router *gin.RouterGroup) {
 
 	{
 		basicsRoutes.GET("/", controllers.BasicController)
+		basicsRoutes.GET("/struct", controllers.BasicStructResponse)
 	}
 
 }

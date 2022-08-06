@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"gin-rest-server-sample/routes"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -20,14 +18,6 @@ func main() {
 	router := app.Group("/api")
 
 	routes.BasicsRoutes(router)
-
-	app.GET("/", func(ctx *gin.Context) {
-		fmt.Println(ctx.Request.Header)
-		ctx.JSON(http.StatusOK, AnyReponse{
-			Ok:  true,
-			Msg: "Hello World",
-		})
-	})
 
 	app.Run()
 
