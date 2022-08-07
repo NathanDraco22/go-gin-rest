@@ -18,6 +18,7 @@ func main() {
 	router := app.Group("/api")
 
 	routes.BasicsRoutes(router)
+	routes.OnlyPost(router)
 
 	app.Run()
 
